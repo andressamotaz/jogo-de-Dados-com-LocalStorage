@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Jogo de Dados</title>
+  <script type="module" src="index.js" defer></script>
+  <style>
+    {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+    
+      h4 {
+        margin-top: 0;
+      }
+    
+      #vencedor {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    
+      .dado1,
+      .dado2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+    
+      .dado1 button,
+      .dado2 button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .dado1 button:disabled,
+      .dado2 button:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+      }
+    
+      .bt {
+        text-align: center;
+        margin-top: 20px;
+      }
+    
+      .bt button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #008cba;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .bt button:hover {
+        background-color: #005b82;
+      }
+      </style>
+</head>
+
+<body>
+  <strong>
+    <div id="vencedor"></div>
+  </strong>
+  <div>
+
+    <div>
+      <h4>Desafie seu amigo em 10 Rodadas!</h4>
+      <h1>🎲</h1>
+      <h6 id="campeao"></h6>
+      <div class="dado1">
+        <button id="bt1">Jogar dado 1</button>
+        <p id="res1"></p>
+      </div>
+      <h6>------------------</h6>
+
+      <div class="dado2">
+        <button id="bt2" disabled>Jogar dado 2</button>
+        <p id="res2"></p>
+      </div>
+      <div class="bt"> <button id="bt">Reiniciar Jogo</button></div>
+
+      <div id="rodadas"></div>
+
+</body>
+
+</html>
